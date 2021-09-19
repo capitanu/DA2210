@@ -1,0 +1,137 @@
+\documentclass[english]{report}
+
+
+\setlength {\marginparwidth }{2cm} 
+\usepackage{todonotes}
+
+\usepackage[perpage,para,symbol]{footmisc}
+
+\hyphenpenalty=15000 
+\tolerance=1000
+
+\usepackage{tikz}
+\usetikzlibrary{arrows,decorations.pathmorphing,backgrounds,fit,positioning,calc,shapes}
+\usepackage{pgfmath}
+\usepackage{rotating}
+\usepackage{array}	
+\usepackage{graphicx}
+\usepackage{float}	
+\usepackage{mdwlist}
+\usepackage{setspace}
+\usepackage{listings}
+\usepackage{bytefield}
+\usepackage{tabularx}
+\usepackage{multirow}	       
+\usepackage{caption} 
+\captionsetup[table]{skip=10pt}
+
+\usepackage{url}               
+\usepackage{hyperref}
+\usepackage[all]{hypcap}	
+\usepackage{titlesec}
+\setcounter{secnumdepth}{4}
+\titleformat{\paragraph}
+{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph}
+{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+\hypersetup{colorlinks,breaklinks,
+            linkcolor=darkblue,urlcolor=darkblue,
+            anchorcolor=darkblue,citecolor=darkblue}
+
+
+\definecolor{darkblue}{rgb}{0.0,0.0,0.3} 
+\definecolor{darkred}{rgb}{0.4,0.0,0.0}
+\definecolor{red}{rgb}{0.7,0.0,0.0}
+\definecolor{lightgrey}{rgb}{0.8,0.8,0.8} 
+\definecolor{grey}{rgb}{0.6,0.6,0.6}
+\definecolor{darkgrey}{rgb}{0.4,0.4,0.4}
+\definecolor{aqua}{rgb}{0.0, 1.0, 1.0}
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\lstset{
+  language=C,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=none,
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=3
+}
+\usepackage{listings}
+\PassOptionsToPackage{USenglish,english}{babel} 
+\usepackage{csquotes}
+\usepackage[USenglish,english]{babel}
+\usepackage[acronym, section=section, nonumberlist, nomain, nopostdot]{glossaries}
+\pagenumbering{roman}
+\makeglossaries
+ 
+\makeglossaries
+\newcommand{\colorbitbox}[3]{%
+	\rlap{\bitbox{#2}{\color{#1}\rule{\width}{\height}}}%
+	\bitbox{#2}{#3}}
+
+\begin{document}
+
+\title{Homework 1}
+\author{Calin Capitanu}
+
+\maketitle
+
+\clearpage
+\chapter{Science as Falsification}
+
+\section{Followers Conventional Twist}
+One of the conclusions of the Popper's essay is that ``Some genuinely testable theories, when found to be false, are still upheld by their admirers — for example by introducing
+ad hoc some auxiliary assumption, or by reinterpreting the theory ad hoc in such a way that it escapes refutation. Such a
+procedure is always possible, but it rescues the theory from refutation only at the price of destroying, or at least lowering, its
+scientific status.'' \cite{popper}. I chose this conclusion as it seems important are highly relevant in today's society, where people that gain trust become trusted whatsoever and supported in actions that one would generally not support, but since they are supported by their models, they thus support them too.
+\\\\
+An example that I found in Popper's essay that supports this conclusion is the one of the Marxist theory of history. This example directly supports the previously formulated conclusion, as it shows that Marx's followers, once saw that the theory was testable and falsified, they started re-itnerepreting the theory and the evidence, just to have the theory still hold. Changing different ``parameters'' of the theory, the evidence or the testability of such, in fact does change the theory in itself, however, his followers wanted to rescue it. The price of this is that when they did it, they gave it a ``conventional twist'', which is what Popper calls it. This in fact destroys the strategy, instead. It proves even further that the theory did not hold from the beginning, and it even deeper accentuates the initial falsification. \cite[p.~3]{popper}
+\section{Tabula Rasa}
+One interesting theory that dates from 1689 is the Blank State theory (also known as Tabula rasa). This theory states that a newborn has no previous knowledge, but that everything is gained through experiences and learning. This theory is really interesting and has its roots in genetics science. It was initially developed by John Locke in the ``Essay Concerning Human Understanding''. In this, he described the mind of a newborn as being as a ``blank slate'' (tabula rasa).
+\\\\
+However, with science evolution and further theory studies, this theory has later been proven to be falsified, as more genetic science and experimenting, as well as theories have been developed. It is interesting to see that the theory is, however already falsified, still believed in to the present. Robert Duschinsky, in the article ``Tabula Rasa and Human Nature'' \cite{tabula-rasa} took a deeper look in its meaning and how the theory is still present in human beliefs today, however it is already ``debunked''.
+
+\chapter{What is truth?}
+
+We all know that everything is relative. Such, the truth can be relative in this sense. Moreover, when something is true, it can be true from different perspectives, with different types of reasoning.
+\\
+Below I will take the list of 9 statements and analyze them from the perspective of truth
+
+\begin{enumerate}
+  
+\item The program statement while (true) {} gives an infinite loop.
+  
+\item Mergesort has complexity O(n log n).
+  
+\item Apple suffered losses in the consumer market last year.
+
+\item Comments make it easier to modify programs.
+
+\item Agile development provides greater job satisfaction.
+  
+\item Two doses of the mRNA Covid-19 vaccine BNT162b2 give a 95\% protection for adults.
+  
+\item P is a strict subset of NP.
+  
+\item This statement is true.
+  
+\item This statement is false. (Note - interpret this as "Statement 9 in the second part of HW1 is false")
+  
+\end{enumerate}
+
+
+
+\bibliographystyle{myIEEEtran}
+\renewcommand{\bibname}{References}
+\addcontentsline{toc}{chapter}{References}
+\bibliography{references}
+
+\end{document}
