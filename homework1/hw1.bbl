@@ -32,4 +32,14 @@ R.~DUSCHINSKY, ``"tabula rasa" and human nature,'' \emph{Philosophy}, vol.~87,
   \url{http://www.jstor.org/stable/41682980}
 \BIBentrySTDinterwordspacing
 
+\bibitem{covid}
+\BIBentryALTinterwordspacing
+K.~Katella. (2021, Feb) Comparing the covid-19 vaccines: How are they
+  different? [Online]. Available:
+  \url{https://www.yalemedicine.org/news/covid-19-vaccine-comparison}
+\BIBentrySTDinterwordspacing
+
+\bibitem{pnp}
+J.~Meek, ``P is a proper subset of np,'' 05 2008.
+
 \end{thebibliography}

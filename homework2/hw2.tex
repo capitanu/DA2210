@@ -1,0 +1,146 @@
+\documentclass[english]{report}
+
+
+\setlength {\marginparwidth }{2cm} 
+\usepackage{todonotes}
+
+\usepackage[perpage,para,symbol]{footmisc}
+
+\hyphenpenalty=15000 
+\tolerance=1000
+
+\usepackage{tikz}
+\usetikzlibrary{arrows,decorations.pathmorphing,backgrounds,fit,positioning,calc,shapes}
+\usepackage{pgfmath}
+\usepackage{rotating}
+\usepackage{array}	
+\usepackage{graphicx}
+\usepackage{float}	
+\usepackage{mdwlist}
+\usepackage{setspace}
+\usepackage{listings}
+\usepackage{bytefield}
+\usepackage{tabularx}
+\usepackage{multirow}	       
+\usepackage{caption} 
+\captionsetup[table]{skip=10pt}
+
+\usepackage{url}               
+\usepackage{hyperref}
+\usepackage[all]{hypcap}	
+\usepackage{titlesec}
+\setcounter{secnumdepth}{4}
+\titleformat{\paragraph}
+{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph}
+{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+\hypersetup{colorlinks,breaklinks,
+            linkcolor=darkblue,urlcolor=darkblue,
+            anchorcolor=darkblue,citecolor=darkblue}
+
+
+\definecolor{darkblue}{rgb}{0.0,0.0,0.3} 
+\definecolor{darkred}{rgb}{0.4,0.0,0.0}
+\definecolor{red}{rgb}{0.7,0.0,0.0}
+\definecolor{lightgrey}{rgb}{0.8,0.8,0.8} 
+\definecolor{grey}{rgb}{0.6,0.6,0.6}
+\definecolor{darkgrey}{rgb}{0.4,0.4,0.4}
+\definecolor{aqua}{rgb}{0.0, 1.0, 1.0}
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\lstset{
+  language=C,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=none,
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=3
+}
+\usepackage{listings}
+\PassOptionsToPackage{USenglish,english}{babel} 
+\usepackage{csquotes}
+\usepackage[USenglish,english]{babel}
+\usepackage[acronym, section=section, nonumberlist, nomain, nopostdot]{glossaries}
+\makeglossaries
+ 
+\makeglossaries
+\newcommand{\colorbitbox}[3]{%
+	\rlap{\bitbox{#2}{\color{#1}\rule{\width}{\height}}}%
+	\bitbox{#2}{#3}}
+
+\begin{document}
+
+\title{Homework 2}
+\author{Calin Capitanu}
+
+\maketitle
+
+\clearpage
+\chapter{Achilles and the Tortoise}
+
+The introduction of the problem consists of Achilles and a tortoise competing in a race. The problem statement says that the quickest runner can never overtake the slower runner in a race.
+\\\\
+The problem starts with the two racers, at 100 meters apart (Achilles - the faster runner - behind the tortoise). Both running at a constant speed, Achilles faster. The premise is that after some time when Achilles will reach the tortoise initial point, the tortoise will have alos advanced (some smaller distance). Repeating this, with smaller distance and smaller times, it is ``proven'' that Achilles will never reach the tortoise.
+\\\\
+Intuitively, we already know this is false, but the problem here is the formulation of the problem, as well as ``hiding'' some facts.
+\\
+However, everything is true in this whole paradox, except for the conclusion. If we divide the time and the respective distance into smaller and smaller ranges, the faster racer will in fact never reach the slower racer, but the race will also never finish, as they will get stuck into a point, motionless, since we are taking the limit of time to 0.
+\\\\
+The wrong part here is that, firstly, the problem space is described only in terms of distance, and the dependence of time is not specified, however, these two go hand-in-hand in this problem.
+\\\\
+Another way of resolving the paradox is by coming back to the initial state, where the two are running at a constant speed, and taking into account the constant flow of time.
+
+\clearpage
+\chapter{When does induction work?}
+
+\section{Raven paradox}
+
+The raven paradox is one of two opposite (double negated) statements which are both true, however somewhat excluding each-other. That is, one should not consider that the first one is true by inspecting the second one, even though the second one is true as well. The sample set is too large in the second case in the raven paradox.
+\\\\
+In my opinion, the best resolution of the paradox is the Standard Bayesian solution. This solution gives mathematical reasoning of the problem space of both ravens and non-black objects. That is, in a different resolution (Hempel's resolution), the problem space is discussed, and the probability of observing the whole samples in the raven case is hard, but reachable, however in the non-black objects, it is impossible.
+\\
+The Bayesian solution offers a chance to accept the conclusion, and thus taking into account the non-black objects, but having that with a really small proportion, thus comparing it to the whole space of non-black objects. This solution is mathematical and, somehow does not fully disapprove the conclusion.
+
+\section{Goodman's paradox}
+
+Goodman's paradox defines a property of an object to be related to time. More precisely, the time constraint is set to be met (for a long enough time), while the actual property is set to a real, true and confirmed property of the object. The supposition is that after the time constraint is false, the other property is also false, since they, together create a property.
+\\\\
+I think that in this case, any sort of statement that is related to time can be considered a relative example to this, while making it also incorrect with respect to induction. Let us take the example of a mathematical formula that can be proven with induction: \\\\
+$1 + 2 + 3 + \dots + n = \frac{(n)(n+1)}{2}$
+\\\\
+We know we can prove this with induction, but what if we consider this to be true before a specified time, and after that time, both properties (which form a single one now) will not hold anymore.\\
+This is something more or less similar to Goodman's paradox, and it is also something that does not work well with induction, since it is time dependent, and we can not project what future times will mean, but similarly to the initial paradox, this is intuitively a wrong assumption.
+
+\clearpage
+\chapter{Research basics}
+
+\section{Research to obtain knowledge}
+
+One really interesting research paper is ``Satellite Fault Diagnosis Using Support Vector Machines Based on a Hybrid Voting Mechanism '' from the College of Computer, National University of Defense Technology, Changsha 410073, China and Xiangyang School for NCOs, Xiangyang 441118, China. \cite{hybrid} \\
+This paper explores the possibility of using a machine learning hybrid voting system in a fault detection, isolation and recovery system in satellites (and other real time systems). After, proposing the system, the researchers evaluate the solution by implementing the prototype and analyzing the quality of the results, comparing the results with previous, traditional fault detection systems. Thus this research paper uses evaluation to gain knowledge.
+\\\\
+Interestingly enough, the same research paper uses some other forms of gaining knowledge, through comparison. That is, while refering to the newly proposed solution, it compares the implementation of the machine learning algorithms, with some other possibilities, thus making the right choice for the system they are building. This is using comparison to gain knowledge. \cite[p.~10]{hybrid}
+
+\section{Approaches in Computer Science research}
+
+I personally think that in the amount of research paper that exist, all of the approaches that Walliman mentioned might appear, since the opinions and mindsets are so different across researchers.\\
+However, of course there are predominent research approaches when it comes to computer scientists, and I consider those to be the positivim approch, since that is the most objective one, which is what science should be, in my opinion.
+\\\\
+The first example that I want to give is the one that is not as common in Computer Science, however still practiced. A survey reseach paper on fault detection, isolation and recovery by SalarKaleji, Fatemeh and Dayyani, Aboulfazl uses a relativist approach, since it takes subjective input to reveal different interpretations on a system. \cite{survey}
+\\\\
+The other example is a positivist approach, that is, the more common approach when it comes to Computer Science. In their research paper, Aman Kumar, Sharma Assistant and Suruchi Sahni conduct a comparative study of different classification algorithms. This method uses experiments and defined methods and have no subjective input, they act as neutral observers, thus this is classified into positivism. \cite{class}
+
+\bibliographystyle{myIEEEtran}
+\renewcommand{\bibname}{References}
+\addcontentsline{toc}{chapter}{References}
+\bibliography{references}
+
+\end{document}
