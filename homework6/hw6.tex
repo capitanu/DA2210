@@ -1,0 +1,104 @@
+\documentclass[english]{report}
+
+
+\setlength {\marginparwidth }{2cm} 
+\usepackage{todonotes}
+
+\usepackage[perpage,para,symbol]{footmisc}
+
+\hyphenpenalty=15000 
+\tolerance=1000
+
+\usepackage{tikz}
+\usetikzlibrary{arrows,decorations.pathmorphing,backgrounds,fit,positioning,calc,shapes}
+\usepackage{pgfmath}
+\usepackage{rotating}
+\usepackage{array}	
+\usepackage{graphicx}
+\usepackage{float}	
+\usepackage{mdwlist}
+\usepackage{setspace}
+\usepackage{listings}
+\usepackage{bytefield}
+\usepackage{tabularx}
+\usepackage{multirow}	       
+\usepackage{caption} 
+\captionsetup[table]{skip=10pt}
+
+\usepackage{url}               
+\usepackage{hyperref}
+\usepackage[all]{hypcap}	
+\usepackage{titlesec}
+\setcounter{secnumdepth}{4}
+\titleformat{\paragraph}
+{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph}
+{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+\hypersetup{colorlinks,breaklinks,
+            linkcolor=darkblue,urlcolor=darkblue,
+            anchorcolor=darkblue,citecolor=darkblue}
+
+
+\definecolor{darkblue}{rgb}{0.0,0.0,0.3} 
+\definecolor{darkred}{rgb}{0.4,0.0,0.0}
+\definecolor{red}{rgb}{0.7,0.0,0.0}
+\definecolor{lightgrey}{rgb}{0.8,0.8,0.8} 
+\definecolor{grey}{rgb}{0.6,0.6,0.6}
+\definecolor{darkgrey}{rgb}{0.4,0.4,0.4}
+\definecolor{aqua}{rgb}{0.0, 1.0, 1.0}
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\lstset{
+  language=C,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=none,
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=3
+}
+\usepackage{listings}
+\PassOptionsToPackage{USenglish,english}{babel} 
+\usepackage{csquotes}
+\usepackage[USenglish,english]{babel}
+\usepackage[acronym, section=section, nonumberlist, nomain, nopostdot]{glossaries}
+\makeglossaries
+ 
+\makeglossaries
+\newcommand{\colorbitbox}[3]{%
+	\rlap{\bitbox{#2}{\color{#1}\rule{\width}{\height}}}%
+	\bitbox{#2}{#3}}
+
+\begin{document}
+
+\title{Homework 6: \\ Philosophy of Science \\ and Consciousness}
+
+\maketitle
+
+\clearpage
+\chapter{Philosophy of Science}
+
+a. Scientific anti-realism represents the claims that some things are ``non-real'' if unobservable by human senses. \\
+One such example would be ultrasound skin treatment. This is an unobservable process, no human sense can see it or sense it in any way, thus it can be considered ``unreal'' with scientific anti-realism.
+\\\\
+b. Even if one accepts Popper's theory regarding true and false theories, science is still a meaningful thing to do. Firstly, because scientists do not need to care about the philosophy of science while they do it, they are ``different'' fields, and thus, as Janet's blog post mentions, the philosophy of science can even be recreational sometimes, but not needed for the one who practices. \\
+Secondly, it could sometimes be sufficient to demonstrate that a theory is false in order to give meaning to another theory!.
+
+\chapter{Consciousness}
+
+Searle in his argument specifies that the understanding of Chinese based on the algorithm implementation should be similar to both the human and the computer, and that if the human does not understand it by implementing the algorithm, so must the computer not understand it, as far as I understand it.
+\\\\
+At the same time, he better defines the same implementation of the algorthm between a human brain and a computer, which is basicallyi mpossible due to the limitations of our knowledge of the biological capabilities as well as the formal implementation of computers.
+\\\\
+I agree with the addition to the conclusion that he has. The human mind can not be analyzed and compared to a computer since we don't yet have the resources to do so, and we do not understand all of the cognitive connections that happen in our brain while running such algorithm (as the Chinese Room problem). If we assume that the implementation of the same algorithm only triggers specific parts of our brain into solving the problem ``irrationally'', then we can assume that neither the human, nor the computer ``learn Chinese'' by running the algorithm. However, when running such algorithm, the human brain is triggered in more ways compared to a computer brain, and this is done unconsciously, which proves the capabilities of the human brain, outside of a specific task.
+\\\\
+Computer programs are most of the times specific for one task, and created in such way that they solve the task, not necessary understand it. However, human brains work differently in my opinion, since they have the ability to associate things and to recognize patterns in a different way.
+
+\end{document}

@@ -1,0 +1,149 @@
+\documentclass[english]{report}
+
+
+\setlength {\marginparwidth }{2cm} 
+\usepackage{todonotes}
+
+\usepackage[perpage,para,symbol]{footmisc}
+
+\hyphenpenalty=15000 
+\tolerance=1000
+
+\usepackage{tikz}
+\usetikzlibrary{arrows,decorations.pathmorphing,backgrounds,fit,positioning,calc,shapes}
+\usepackage{pgfmath}
+\usepackage{rotating}
+\usepackage{array}	
+\usepackage{graphicx}
+\usepackage{float}	
+\usepackage{mdwlist}
+\usepackage{setspace}
+\usepackage{listings}
+\usepackage{bytefield}
+\usepackage{tabularx}
+\usepackage{multirow}	       
+\usepackage{caption} 
+\captionsetup[table]{skip=10pt}
+
+\usepackage{url}               
+\usepackage{hyperref}
+\usepackage[all]{hypcap}	
+\usepackage{titlesec}
+\setcounter{secnumdepth}{4}
+\titleformat{\paragraph}
+{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph}
+{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+\hypersetup{colorlinks,breaklinks,
+            linkcolor=darkblue,urlcolor=darkblue,
+            anchorcolor=darkblue,citecolor=darkblue}
+
+
+\definecolor{darkblue}{rgb}{0.0,0.0,0.3} 
+\definecolor{darkred}{rgb}{0.4,0.0,0.0}
+\definecolor{red}{rgb}{0.7,0.0,0.0}
+\definecolor{lightgrey}{rgb}{0.8,0.8,0.8} 
+\definecolor{grey}{rgb}{0.6,0.6,0.6}
+\definecolor{darkgrey}{rgb}{0.4,0.4,0.4}
+\definecolor{aqua}{rgb}{0.0, 1.0, 1.0}
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\lstset{
+  language=C,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=none,
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=3
+}
+\usepackage{listings}
+\PassOptionsToPackage{USenglish,english}{babel} 
+\usepackage{csquotes}
+\usepackage[USenglish,english]{babel}
+\usepackage[acronym, section=section, nonumberlist, nomain, nopostdot]{glossaries}
+\makeglossaries
+ 
+\makeglossaries
+\newcommand{\colorbitbox}[3]{%
+	\rlap{\bitbox{#2}{\color{#1}\rule{\width}{\height}}}%
+	\bitbox{#2}{#3}}
+
+\begin{document}
+
+\title{Reading a Scientific Article}
+
+\maketitle
+
+\clearpage
+\chapter{Reading an article}
+\section{Accessing the article}
+
+I chose to read the article on ``Comparing anomaly-detection algorithms for keystroke dynamics.'' by Kevin S. Killourhy and R. Maxion \cite{anomaly}. There were multiple sources where I found this article available, such as ResearchGate or IEEE explore. Since all of them were the same, choosing which source to use was not important in this case. However, I chose ReasearchGate in order to generate a formatted citation form for this paper.
+
+\section{Publication}
+
+This article was published in the Conference Proceeding entitled ``International Conference on Dependable Systems and Networks'' held in 2009 \cite{conference}. Conferences are the most interactive way of presenting and publishing an article. The author, most often, also have some sort of presence at an event where they talk and present their work. In this case, the outreach can also be highly increased and getting more people closely involved in the work is easier. The field of this conference is obviously Computer Science, while it aims more towards, what is specified in the title: ``Dependable Systems and Networks''.
+\\\\
+I think the choice of this medium of publication is made becase maybe the authors aimed for a higher reach and with trying to get the people to understand while talking about their work. At the same time, they also maybe wanted a more open debate on their work, where people could probably start asking questions as well.
+
+\section{Purugganan and Hewitt's technique}
+
+\underline{Coplete citation}: Kevin S. Killourhy and R. Maxion, 29 September 2009, Comparing anomaly-detection algorithms for keystroke dynamics, International Conference on Dependable Systems and Networks (DSN).
+\\\\
+\underline{Web Link}: https://ieeexplore.ieee.org/document/5270346 (Accessed 31-10-2021)
+\\\\
+\underline{Keywords}: None specified
+\\\\
+\underline{General subject}: The study of keystroke pattern recognition and anomaly detection in such algorithms.
+\\\\
+\underline{Specific subject}: To ``collect a keystroke-dynamics data set'' and to analyze different classification and detection algorithms with a fair measure of performance in what stands anomaly detection.
+\\\\
+\underline{Hypothesis}: Using anomaly detection algorithms in password typing can reduce the risk of fraudulous attempts to steal accounts.
+\\\
+\underline{Methodology}: The methodology section is divided into 3 parts: collection of data, detector implementation and evaluation.
+\\\\
+\underline{Results}: The 14 detectors were evaluated using statistical significance. The best rate was obtained by the Manhattan (scaled) detector.
+\\\\
+\underline{Summary of key points}: Password cracking can be detected using anomaly detection algorithms, but the rate of recognition is not yet high enough with any of the 14 evaluated ones, thus it can not be widely used, yet.
+\\\\
+\underline{Context}: This article is directly connected to any password cracking and cyber security researches. In most of the cases, the target of cyber attacks that contain password cracking are individuals, but a lot of in-house password cracking is used in companies as well! This article can be easily contextualized in a day-to-day life by almost anyone nowadays.
+\\\\
+\underline{Significance}: The most important thing about this article is that it proves that there is a lot of possible improvement in his field in the sense of anomaly detection. It proves that this anomaly detection algorithms are still lacking and that they can not be used in practice yet.
+\\\\
+\underline{Important Figures and/or Tables}: Table 2 page 8
+
+\section{References}
+
+One article that drew my attention is ``Identity authentication based on keystroke latencies'' by Rick Joyce and Gopal Gupta. This article, after some inspection seems to be a more in-depth analysis of such algorithms of authentication, which is an interesting topic and closely related to the initial article. \cite{reference1}
+\\\\
+One article that cites this selected article is called ``RHU Keystroke: A mobile-based benchmark for keystroke dynamics systems'' \cite{reference2}. This article tries to analyze similar behaviours, however, this time, on a mobile screen with touch sensitivity. This is interesting as the mobile platforms are growing in popularity.
+
+\section{IMRD}
+
+Firstly, the article that I initially chose does not necessary follow the IMRD format. There is one reason that this article does not follow this specific format strictly, and that is that sometimes, in these types of articles, more information is needed than what can be categorized in this subsection. A lot of the times, a good background introduction is needed in the field of Computer Science.
+\\\\
+At the same time, the article on ``Graphs over time: densification laws, shrinking diameters and possible explanations.'' also does not implement the same standard strictly. For example, in this article, the main point of difference is the fact that there is also a proposed model section. Articles can vary by their structure according to what they actually represent.
+
+\section{Citations}
+
+The article that I have chosen has been cited for 224 times in other papers and for 11 times in patents.
+
+\section{Contribution}
+
+The article that I chose contributes to the analysis and development of cyber security, as well as computer science in general, as it proves limitations of specific algorithms.
+
+
+\bibliographystyle{myIEEEtran}
+\renewcommand{\bibname}{References}
+\addcontentsline{toc}{chapter}{References}
+\bibliography{references}
+
+\end{document}
