@@ -1,0 +1,134 @@
+\documentclass[english]{report}
+
+
+\setlength {\marginparwidth }{2cm} 
+\usepackage{todonotes}
+
+\usepackage[perpage,para,symbol]{footmisc}
+
+\hyphenpenalty=15000 
+\tolerance=1000
+
+\usepackage{tikz}
+\usetikzlibrary{arrows,decorations.pathmorphing,backgrounds,fit,positioning,calc,shapes}
+\usepackage{pgfmath}
+\usepackage{rotating}
+\usepackage{array}	
+\usepackage{graphicx}
+\usepackage{float}	
+\usepackage{mdwlist}
+\usepackage{setspace}
+\usepackage{listings}
+\usepackage{bytefield}
+\usepackage{tabularx}
+\usepackage{multirow}	       
+\usepackage{caption} 
+\captionsetup[table]{skip=10pt}
+
+\usepackage{url}               
+\usepackage{hyperref}
+\usepackage[all]{hypcap}	
+\usepackage{titlesec}
+\setcounter{secnumdepth}{4}
+\titleformat{\paragraph}
+{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph}
+{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+\hypersetup{colorlinks,breaklinks,
+            linkcolor=darkblue,urlcolor=darkblue,
+            anchorcolor=darkblue,citecolor=darkblue}
+
+
+\definecolor{darkblue}{rgb}{0.0,0.0,0.3} 
+\definecolor{darkred}{rgb}{0.4,0.0,0.0}
+\definecolor{red}{rgb}{0.7,0.0,0.0}
+\definecolor{lightgrey}{rgb}{0.8,0.8,0.8} 
+\definecolor{grey}{rgb}{0.6,0.6,0.6}
+\definecolor{darkgrey}{rgb}{0.4,0.4,0.4}
+\definecolor{aqua}{rgb}{0.0, 1.0, 1.0}
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\lstset{
+  language=C,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=none,
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=3
+}
+\usepackage{listings}
+\PassOptionsToPackage{USenglish,english}{babel} 
+\usepackage{csquotes}
+\usepackage[USenglish,english]{babel}
+\usepackage[acronym, section=section, nonumberlist, nomain, nopostdot]{glossaries}
+\pagenumbering{roman}
+\makeglossaries
+ 
+\makeglossaries
+\newcommand{\colorbitbox}[3]{%
+	\rlap{\bitbox{#2}{\color{#1}\rule{\width}{\height}}}%
+	\bitbox{#2}{#3}}
+
+\begin{document}
+
+\title{Planning an experiment}
+\author{Calin Capitanu}
+
+\maketitle
+
+\clearpage
+\chapter{}
+\section{Research Question}
+How can one design a real time system using cooperative task scheduling in the operating system?
+
+\section{Related Papers}
+Real time systems require hard timings and constrains when it comes to task scheduling. However, some times, preemptive (or traditional) scheduling is not possible due to some other reasons, or even it could be found that this can be improved by using a different type of de-centralized scheduling. Neil A.Duffie and Vittaldas V.Prabhu research using such distributed scheduling system for manufacturing systems with interesting finding regarding faults that this systems could be prone to \cite{cite1}.\\
+A second paper that deals with this has an interesting approach to it, since it aims to solve a problem that is modern: cloud computing. Splitting of resources in cloud computing when more clients are in need is a real time task that needs close attention, and usually, the providers choose to satisfy all clients by neglecting the power consumption. Authors of the paper ``A Cooperative Two-Tier Energy-Aware Scheduling for Real-Time Tasks in Computing Clouds'' suggest a cooperative scheduler that would minimize the power consumption and maximize the time fitting for different tasks in a cloud server meant for client \cite{cite2}.
+
+\section{Hypothesis}
+
+I think that some real time systems could benefit from the use of a cooperative scheduler. However, I also think that such a system is more prone to failure and that close tweaking of parameters and insepction while experimenting is needed. Not all systems can work with a cooperative scheduler, however a lot could benefit from it.
+
+\section{Operationalization}
+
+This thesis can be put be sustained by experimenting with different real time systems that would use cooperative scheduling. If all the task meet their deadlines after tweaking the amount of time each task takes, the hypothesis holds for that specific system. However, it is too hard to generalize such hypothesis.
+
+\section{Experiment}
+
+An experiment that I suggest is taking a real time system, for example a satellite and changing the scheduling policy from preemptive (traditional) to cooperative. \\
+The system will then be tweaked to allow each task to run for some specific time (or until it finishes its desired outcome) and then give way to another task by itself. If all the time constraints are met, the tests should be considered passed and the hypothesis passes.
+
+\section{Evaluation}
+
+The evaluation of the experiment should be done in comparison to the previously implemented scheduling policy, that is, preemptive scheduling. A chart of all the time constraints and all the previously achieved times should be drawn out.\\
+After the reference is set, the system should be run with the new scheduling policy, and thus the times achieved (by each task individually) according to some specific set initial time should also be laid down in the chart described above. The times between preemptive scheduling and cooperative scheduling should not necessary match perfectly, but if all the time constrains can be achieved, the new system succeeds. \\
+Since the tasks are going to be scheduled in the same order, a delta time between the finish time of each task can be calculated for both scheduling policies, thus, for performance matters, this delta time can be summed up and compared, getting an average performance measure for the new system design.
+
+\section{Requirements}
+
+There are hardly any requirements on this experiment that most of the computer scientists don't already have. However, in order to be more specific, I would suggest that the experiment would be carried out on a Raspberry Pi. A basic program with simple task (that can be mocked out) can be either written from skratch or taken from an online free and open source website. However, for the general experiment, nothing more than a Raspberry Pi should be needed.
+
+\section{Objections}
+
+One could argue that one objection to experimentation that this proposal has is the ``slowing of progress''. However, I don't think that would be the case, since this approach is niche and it has nothing ``new'' to it, except for fusion of technologies and applications. If results of such reasearch are good, the progress could actually speed up!\\\\
+
+\noindent
+Another possible claim is that papers like these would never get published. However, that is a ``marketing'' issue in general. One could argue that starting a company is useless as ``they would never get customers''. That is not true. At all.\\\\
+
+\noindent
+Another thing to argue about as an objection to experimentation, or rather, a problem, is the behaviour of managers or funding agencies. Such experiment, if properly implemented and let us say, with mediocre results, could be published or marketed in a misleading way, but that should not be a halt to experimentation by any means.\\\\
+
+\bibliographystyle{myIEEEtran}
+\renewcommand{\bibname}{References}
+\addcontentsline{toc}{chapter}{References}
+\bibliography{references}
+
+\end{document}
